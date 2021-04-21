@@ -31,7 +31,7 @@ public class TestDataProvider {
         document.put("first_name", FAKER.name().firstName());
         document.put("last_name", FAKER.name().lastName());
         final IndexRequest indexRequest= new IndexRequest()
-                .index("ms-en-idx")
+                .index("ms-es-idx")
                 .id(UUID.randomUUID().toString())
                 .source(document, XContentType.JSON);
         client.indexAsync(indexRequest, RequestOptions.DEFAULT, new ActionListener<IndexResponse>() {
