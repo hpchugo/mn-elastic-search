@@ -27,7 +27,7 @@ public class TestDataProvider {
 
     @Scheduled(fixedDelay = "10s")
     void insertDocument(){
-        var document = new HashMap<>();
+        var document = new HashMap<String, String>();
         document.put("first_name", FAKER.name().firstName());
         document.put("last_name", FAKER.name().lastName());
         final IndexRequest indexRequest= new IndexRequest()
